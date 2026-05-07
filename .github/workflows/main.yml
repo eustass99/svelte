@@ -28,7 +28,7 @@ jobs:
         echo "ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}" >> $GITHUB_ENV
         echo "ECR_REPOSITORY=svel" >> $GITHUB_ENV
         echo "IMAGE_TAG=${{ github.run_number }}" >> $GITHUB_ENV
-        echo "GIT_EMAIL=너깃허브이메일" >> $GITHUB_ENV
+        echo "GIT_EMAIL=lhj990118@gmail.com" >> $GITHUB_ENV
         echo "GIT_NAME=eustass99" >> $GITHUB_ENV
 
     - name: Docker Image Build
