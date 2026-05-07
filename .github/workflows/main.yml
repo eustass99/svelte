@@ -48,7 +48,9 @@ jobs:
 
     - name: k8s manifest update
       run: |
-        sed -i "s@image: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:.*@image: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}@g" ./svelte/svelte.yml
+        sed -i "s@image: .*@image: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}@g" ./svelte/svelte.yml
+
+
 
     - name: Commit and Push
       run: |
